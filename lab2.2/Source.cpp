@@ -1,19 +1,22 @@
 #include <iostream>
+#include <clocale>
 
-    using namespace std;
 
-    int main() {
-        // Константа байт в килобайте
-        const int bytesInKilobytes = 1024;
+using namespace std;
 
-        // переменная размер файла в байтах
-        long long fileSizeInBytes;
-        cout << "Введите размер файла в байтах: ";
-        cin >> fileSizeInBytes;
+int main() {
+    setlocale(LC_ALL, "ru");
+    // Константа байт в килобайте
+    const int bytesInKilobytes = 1024;
 
-        // Вычисление размер файла в килобайтах
-        long long fileSizeInKilobytes = fileSizeInBytes / bytesInKilobytes;
-        cout << "Размер файла в килобайтах: " << fileSizeInKilobytes << std::endl;
+    // переменная размер файла в байтах
+    long long fileSizeInBytes;
+    cout << "Введите размер файла в байтах: ";
+    cin >> fileSizeInBytes;
 
-        return 0;
-    }
+    // Вычисление размер файла в килобайтах
+    long long fileSizeInKilobytes = fileSizeInBytes / bytesInKilobytes;
+    cout << "Размер файла в килобайтах: " << fileSizeInKilobytes << std::endl;
+
+    return 0;
+}
